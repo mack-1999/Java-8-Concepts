@@ -1,0 +1,3 @@
+interface JobRoles{
+    int getSalary();
+}
