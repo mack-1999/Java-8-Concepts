@@ -1,5 +1,4 @@
 public class Employee {
-
     //! 1. Private variable of class type
     private static Employee employee;
 
