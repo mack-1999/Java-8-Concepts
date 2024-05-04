@@ -3,6 +3,7 @@ public class Main {
         //! Ways to call Functional interface
         //1
         AddInterImpl obj = new AddInterImpl();
+        obj.greetAll();
         System.out.println("Using Implemention class: "+obj.add(10, 20));
 
         //2
