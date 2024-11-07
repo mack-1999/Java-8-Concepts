@@ -1,3 +1,4 @@
+//! Subclass
 public class JavaDeveloper implements Roles {
     @Override
     public int getSalary() {
