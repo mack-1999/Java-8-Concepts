@@ -2,7 +2,7 @@ package String;
 
 public class StringExample {
     public static void main(String[] args) {
-        String s1 = "Mack"; //! Gets stored into Heap memory -> string pool
+        String s1 = "Mack"; //! String literals: Gets stored into string pool
         String s2 = new String("Mack"); //! Gets stored into Heap
         String s3 = s1.intern(); //! assign to string pool value
         String s4 = new String("Mack");
@@ -14,3 +14,6 @@ public class StringExample {
         System.out.println(s1.equals(s4)); //? True due to it will compare values
     }
 }
+
+//! == Compares reference
+//! equals() Compares values

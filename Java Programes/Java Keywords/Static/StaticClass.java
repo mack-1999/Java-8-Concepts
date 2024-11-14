@@ -13,4 +13,3 @@ public class StaticClass {
         System.out.println("Area: " + area);
     }
 }
-
