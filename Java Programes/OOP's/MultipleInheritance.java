@@ -32,3 +32,5 @@ public class MultipleInheritance {
         bird.fly();
     }
 }
+
+//? Inheritance is the process of acquiring properties and behaviors of a parent class into a child class using the extends keyword.

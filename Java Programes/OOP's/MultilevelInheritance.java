@@ -30,3 +30,7 @@ public class MultilevelInheritance {
         dog.guard();
     }
 }
+
+//? Inheritance is the process of acquiring properties and behaviors of a parent class into a child class using the extends keyword.
+
+//? Multilevel Inheritance: A class inherits from another class, which is inherited from another class.

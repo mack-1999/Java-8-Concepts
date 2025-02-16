@@ -27,3 +27,5 @@ public class EncapsulationExample{
         System.out.println("Updated balance:" + account.getBalance());
     }
 }
+
+//? Encapsulation is the process of wrapping data (variables) and methods (functions) into a single unit (class) and restricting direct access to some components using access modifiers (private, protected, public).

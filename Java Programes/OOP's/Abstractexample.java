@@ -1,6 +1,7 @@
 abstract class Animal {
-    public abstract void makeSound(); // Abstract method
-    public void eat() {
+    public abstract void makeSound(); // Abstract method (No Implemention)
+
+    public void eat() { // Concrete method (Implemented)
         System.out.println("Animal is eating.");
     }
 }
@@ -22,7 +23,13 @@ class Cat extends Animal {
 
 public class Abstractexample{
     public static void main(String[] args){
-        Cat obj = new Cat();
-        obj.makeSound();
+        Animal dog = new Dog();
+        Animal cat = new Cat();
+        dog.makeSound();
+        cat.makeSound();
+        dog.eat();
     }
 }
+
+
+//? Abstraction is the concept of hiding implementation details and exposing only essential features to the user. It is achieved using abstract classes and interfaces.
