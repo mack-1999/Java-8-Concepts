@@ -1,5 +1,5 @@
-package Static;
 class MathUtil {
+    //Inner Class
     public static class Geometry {
         public static double calculateArea(double radius) {
             return Math.PI * radius * radius;
