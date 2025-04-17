@@ -12,6 +12,7 @@ public class StringExample {
         System.out.println(s2 == s4); //? False due to stored differently in heap
         System.out.println(s2.equals(s4)); // True due to it will compare values
         System.out.println(s1.equals(s4)); //? True due to it will compare values
+        System.out.println(s2.hashCode() == s4.hashCode());
     }
 }
 
