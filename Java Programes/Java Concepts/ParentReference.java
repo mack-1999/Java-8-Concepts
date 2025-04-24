@@ -15,7 +15,7 @@ class Child extends ParentReference {
         //At compile-time, the Java compiler only looks at the reference type (here: Parent). Since childMethod() is not defined in Parent, the compiler throws an error — even though the object at runtime is a Child.
 
         //obj.childMethod();
-        ((Child) obj).childMethod();  // Allowed (if obj is actually a Child at runtime)
-        obj.parentMethod();
+        System.out.println(((Child) obj).childMethod());  // Allowed (if obj is actually a Child at runtime)
+        System.out.println(obj.parentMethod());
     }
 }
