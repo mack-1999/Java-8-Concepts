@@ -12,6 +12,7 @@ public class PatientQue {
         );
 
         //! Print all the patient suffering from corona
+        System.out.println("Patients suffering from Corona:");
         patientList.stream().filter(p -> p.getDisease().equals("Corona")).forEach(System.out::println); //Method Referencing ::println
 
         //! Print all patient age < 40
