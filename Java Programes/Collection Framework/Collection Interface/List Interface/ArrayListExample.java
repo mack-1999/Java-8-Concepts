@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ArrayListExample {
@@ -9,7 +10,8 @@ public class ArrayListExample {
         // list.add("Mack"); // we can add different types of data
         list.set(1, 50); // set() method is used to replace the element at specified index
 
-        System.out.println(list.size());
+        System.out.println("List Size: "+list.size());
+
         for(int elements: list){
             System.out.println("1. Arraylist Elements: "+elements);
         }
@@ -23,6 +25,13 @@ public class ArrayListExample {
         for (Object elements: al) {
             System.out.println("2. Arraylist Elements: "+elements);
         }
+
+
+        List<String> names = Arrays.asList("Mack", "John", "Smith");
+        // names.add("Will"); // UnsupportedOperationException
+        System.out.println("Names List: "+names);
+        System.out.println("Names List Size: "+names.size());
+        System.err.println("Class Name:"+names.getClass().getName());
     }
 }
 
