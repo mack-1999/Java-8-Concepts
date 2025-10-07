@@ -1,6 +1,6 @@
-public class AddInterImpl implements AddInterface{
+public class AddInterImpl implements calculation{
     @Override
-    public int add(int a, int b) {
+    public int operator(int a, int b) {
         return a + b;
     }
 }

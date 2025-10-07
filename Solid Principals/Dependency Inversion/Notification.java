@@ -1,11 +1,11 @@
-class EmailService {
+class EmailService { //! Low-level module
     public void sendEmail(String message) {
         System.out.println("Sending email: " + message);
     }
 }
 
 @SuppressWarnings("unused")
-class Notification {
+class Notification { //! High-level module
     EmailService emailService = new EmailService();
 
     public void send(String message) {
