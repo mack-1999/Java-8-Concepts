@@ -1,5 +1,5 @@
 import java.util.LinkedList;
-public class LinkedListExample {
+public class LinkedListClass {
     public static void main(String[] args) {
         LinkedList<Integer> list = new LinkedList();
         list.addFirst(5); // addFirst() method is used to insert the element at the beginning of the list

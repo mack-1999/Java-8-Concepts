@@ -1,7 +1,7 @@
 
 import java.util.Vector;
 
-public class VectoreExample {
+public class VectoreClass {
     public static void main(String[] args) {
         Vector<Integer> vector = new Vector(5, 3); // initial capacity is 5 & increment is 3
         vector.add(10);
