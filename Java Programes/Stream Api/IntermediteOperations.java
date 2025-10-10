@@ -22,6 +22,16 @@ public class IntermediteOperations {
         List<Integer> distinctNumbers = numbersWithDuplicates.stream().distinct().toList();
         System.out.println("Distinct Numbers: "+distinctNumbers);
 
+        // Peek Operation (mainly used for debugging)
+        names.stream().peek(System.out::println).map(String::toLowerCase).toList();
+
+        // Limit Operation & Skip Operation
+        List<Integer> limitedNumbers = numbers.stream().limit(3).toList();
+        System.out.println("Limited Numbers: "+limitedNumbers);
+
+        List<Integer> skippedNumbers = numbers.stream().skip(2).toList();
+        System.out.println("Skipped Numbers: "+skippedNumbers);
+
     }
 }
 
@@ -30,5 +40,8 @@ public class IntermediteOperations {
  2. Map: Used to transform elements.
  3. Sorted: Used to sort elements in natural order or based on a comparator.
  4. Distinct: Used to remove duplicate elements.
- 5. Terminal operations: forEach, toList, collect, reduce, count, etc.
+ 5. Peek: Used to perform an action on each element (mainly for debugging).
+ 6. Limit: Used to limit the number of elements.
+ 7. Skip: Used to skip a number of elements.
+ 8. Terminal operations: forEach, toList, collect, reduce, count, etc.
 */
