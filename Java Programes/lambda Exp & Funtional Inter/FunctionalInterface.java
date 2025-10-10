@@ -1,4 +1,5 @@
-
+import java.util.Arrays;
+import java.util.List;
 import java.util.function.*;
 
 public class FunctionalInterface {
@@ -52,5 +53,13 @@ public class FunctionalInterface {
         BinaryOperator<Integer> multiply = (a, b) -> a * b;
         System.out.println("BinaryOperator Interface: "+multiply.apply(3, 4));
 
+        //! Method References: A shorthand notation of a lambda expression to call a method.
+        List<String> names = List.of("Mack", "Jack", "Charlie");
+        names.forEach(x -> System.out.println(x)); // Lambda expression to print each name
+        names.forEach(System.out::println); // Method reference to print each name
+
+        //! Constructor References: A shorthand notation of a lambda expression to call a constructor.
+        List<String> list = Arrays.asList("A", "B", "C");
+        list.stream().map(String::new).forEach(System.out::println); // Constructor reference
     }
 }
