@@ -4,44 +4,34 @@ import java.util.List;
 public class IntermediteOperations {
     public static void main(String[] args) {
         
-        // Filter Operation
+        // Filter Operation: Used to filter elements based on a condition
         List<String> names = Arrays.asList("Aman", "Ankit", "Sumit", "Rohit", "Suresh", "Ramesh");
         List<String> filteredNames = names.stream().filter(x -> x.startsWith("A")).toList();
         System.out.println("Flitered Names: "+filteredNames);
 
-        // Map Operation
+        // Map Operation: Change an element to another form
         names.stream().map(String::toUpperCase).forEach(System.out::println);
 
-        // Sorted Operation
+        // Sorted Operation: Used to sort elements in natural order or based on a comparator
         List<Integer> numbers = Arrays.asList(5, 3, 8, 1, 2, 7);
         List<Integer> sortedNumbers = numbers.stream().sorted().toList(); //! terminal operation: toList()
         System.out.println("Sorted Numbers: "+sortedNumbers);
 
-        // Distinct Operation
+        // Distinct Operation: Used to remove duplicate elements
         List<Integer> numbersWithDuplicates = Arrays.asList(1, 2, 2, 3, 4, 4, 5);
         List<Integer> distinctNumbers = numbersWithDuplicates.stream().distinct().toList();
         System.out.println("Distinct Numbers: "+distinctNumbers);
 
-        // Peek Operation (mainly used for debugging)
+        // Peek Operation (mainly used for debugging): Used to perform an action on each element
         names.stream().peek(System.out::println).map(String::toLowerCase).toList();
 
-        // Limit Operation & Skip Operation
+        // Limit Operation: Used to limit the number of elements
         List<Integer> limitedNumbers = numbers.stream().limit(3).toList();
         System.out.println("Limited Numbers: "+limitedNumbers);
 
+        // Skip Operation: Used to skip a number of elements
         List<Integer> skippedNumbers = numbers.stream().skip(2).toList();
         System.out.println("Skipped Numbers: "+skippedNumbers);
 
     }
 }
-
-/*
- 1. Filter: Used to filter elements based on a condition.
- 2. Map: Used to transform elements.
- 3. Sorted: Used to sort elements in natural order or based on a comparator.
- 4. Distinct: Used to remove duplicate elements.
- 5. Peek: Used to perform an action on each element (mainly for debugging).
- 6. Limit: Used to limit the number of elements.
- 7. Skip: Used to skip a number of elements.
- 8. Terminal operations: forEach, toList, collect, reduce, count, etc.
-*/
