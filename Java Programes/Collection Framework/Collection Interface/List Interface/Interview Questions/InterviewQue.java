@@ -7,8 +7,8 @@ public class InterviewQue {
         System.out.println("Question 1");
         List<Employee> employees = new ArrayList<>();
 
-        Employee emp1 = new Employee(1, "Makarand", 26);
-        Employee emp2 = new Employee(2, "Jack", 25);
+        Employee emp1 = new Employee(1, "Mack", 26);
+        Employee emp2 = new Employee(2, "Rutu", 25);
         Employee emp3 = new Employee(3, "Sagar", 27);
         
         employees.add(emp1);
@@ -28,17 +28,18 @@ public class InterviewQue {
         System.out.println("Question 2");
         List<String> names = new ArrayList<>();
 
-        String name = "Makarand";
+        String name = "Jack";
         names.add(name);
-        name = "Rutuja"; // Reassigning name to a new String object
+        name = "Rutu"; // Reassigning name to a new String object
 
         System.out.println("Name: "+names.get(0));
+        
         System.out.println("Reassigned Name: "+name);
 
         /*
-        Output is Name: Makarand why?
-            Because String is immutable in Java, when we reassign name to "Rutuja",
-            it creates a new String object and does not affect the original String "Makarand" stored in the list.
+        Output is Name: Jack why?
+            Because String is immutable in Java, when we reassign name to "Rutu",
+            it creates a new String object and does not affect the original String "Jack" stored in the list.
         */
 
     }
