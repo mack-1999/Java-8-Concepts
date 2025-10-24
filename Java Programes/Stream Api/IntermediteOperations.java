@@ -33,5 +33,15 @@ public class IntermediteOperations {
         List<Integer> skippedNumbers = numbers.stream().skip(2).toList();
         System.out.println("Skipped Numbers: "+skippedNumbers);
 
+        // FlatMap Operation: Used to flatten a stream of collections into a single stream
+        List<List<String>> listOfLists = Arrays.asList(
+            Arrays.asList("Orange", "Apple"),
+            Arrays.asList("Banana", "Grapes"),
+            Arrays.asList("Pineapple", "Mango")
+        );
+        System.out.println("List of Lists: "+listOfLists);
+        List<String> flatMapList = listOfLists.stream().flatMap(x -> x.stream()).toList();
+        System.out.println("FlatMapped List: "+flatMapList);
+
     }
 }

@@ -1,10 +1,12 @@
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class InterviewQue {
     public static void main(String[] args) {
         
-        List<Integer> numbers = List.of(1,2,3,4,5,6,7,8,9,10);
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
         List<Integer> intNumbers = List.of(7,1,2,3,4,5,6,7,8,9,10,1,2,3,4);
 
         //todo: Q1. How to find even numbers in a list?
@@ -23,5 +25,15 @@ public class InterviewQue {
         List<Integer> intSquare = numbers.stream().map(num -> num * num).toList();
         //System.out.println("Square of all numbers: "+intSquare);
 
+        //todo: Q5. Merge two arrays, sort them, print only unique numbers
+        int[] arr1 = {5, 3, 9, 1, 3};
+        int[] arr2 = {8, 3, 5, 2, 9, 7};
+
+        int[] mergedUniqueSorted = IntStream.concat(Arrays.stream(arr1), Arrays.stream(arr2))
+                                            .distinct()   // remove duplicates
+                                            .sorted()     // sort the elements
+                                            .toArray();   // convert back to array
+
+        //System.out.println("Unique sorted elements: " + Arrays.toString(mergedUniqueSorted));
     }
 }

@@ -1,10 +1,11 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class TerminalOperations {
     public static void main(String[] args) {
         // forEach Operation
-        List<String> names = Arrays.asList("Aman", "Ankit", "Sumit", "Rohit", "Suresh", "Ramesh");
+        List<String> names = Arrays.asList("Aman", "Ankit", "Sumit", "Rohit", "Makarand", "Ramesh");
         names.stream().forEach(System.out::println);
 
         // Count Operation
@@ -14,7 +15,7 @@ public class TerminalOperations {
         // Reduce Operation
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
         int sum = numbers.stream().reduce(0, (a, b) -> a + b);
-        System.out.println("Sum of numbers: "+sum);
+        System.out.println("Sum of all numbers in list: "+sum);
 
         // AnyMatch Operation
         boolean anyMatch = names.stream().anyMatch(x -> x.startsWith("S"));
@@ -33,6 +34,20 @@ public class TerminalOperations {
 
         // FindAny Operation
         names.stream().findAny().ifPresent(name -> System.out.println("Any name: "+name));
+
+        // toArray Operation
+        Object[] array = Stream.of(1,2,3).toArray();
+
+        // min & max Operation
+        names.stream().min((a,b) -> a.length() - b.length()).ifPresent(name -> System.out.println("Shortest name: "+name));
+        names.stream().max((a,b) -> a.length() - b.length()).ifPresent(name -> System.out.println("Longest name: "+name));
+
+        // forEachOrdered Operation
+        System.out.println("forEach List: ");
+        numbers.parallelStream().forEach(System.out::println);
+
+        System.out.println("forEachOrdered List: ");
+        numbers.parallelStream().forEachOrdered(System.out::println);
 
         //Example
         System.out.println("Length greater than 5: "+names.stream().filter(x -> x.length() > 5).toList());
@@ -56,6 +71,6 @@ public class TerminalOperations {
  1. forEach: Used to perform an action for each element.
  2. Count: Used to count the number of elements.
  3. Reduce: Used to combine elements into a single result.
- 4. NyMatch, AllMatch, NoneMatch: Used to check if any, all, or none of the elements match a given predicate.
- 4. Other terminal operations: toList, collect, findFirst, findAny, etc.
+ 4. AnyMatch, AllMatch, NoneMatch: Used to check if any, all, or none of the elements match a given predicate.
+ 5. Other terminal operations: toList, collect, findFirst, findAny, forEachOrdered, etc.
 */
