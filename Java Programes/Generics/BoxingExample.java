@@ -7,7 +7,7 @@ public class BoxingExample {
         // Autoboxing
         Integer autoBoxedInt = 10; // Automatically boxes int to Integer
 
-        //Unboxing
+        // Unboxing
         int unboxingInt = autoBoxedInt;
 
         System.out.println("Manually boxed Integer: " + boxedInt);
@@ -17,7 +17,7 @@ public class BoxingExample {
         String strInt = "100";
         String strDouble = "45.67";
 
-        //Wrapper Classes
+        // Wrapper Classes
         int intValue = Integer.parseInt(strInt);
         double doubleValue = Double.parseDouble(strDouble);
 

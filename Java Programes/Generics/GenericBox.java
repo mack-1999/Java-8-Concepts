@@ -31,4 +31,5 @@ public class GenericBox<T> {
     1. Type Safety: Generics provide compile-time type checking, reducing the risk of ClassCastException.
     2. Code Reusability: The same class can be used with different data types.
     3. Cleaner Code: Eliminates the need for explicit type casting.
+
  */

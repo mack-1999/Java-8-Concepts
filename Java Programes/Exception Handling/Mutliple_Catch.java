@@ -1,8 +1,12 @@
 class Mutliple_Catch {
     public static void main(String[] args) {
+        System.out.println(example());
+    }
+
+    public static int  example(){
         try {
-            int value = 30 / 0; // ArithmeticException
-            System.out.println(value);
+            int value = 30 / 3;
+            return value;
         } catch (ArithmeticException e) {
             System.out.println(e.getMessage());
         } catch (ArrayIndexOutOfBoundsException e) {
@@ -12,5 +16,16 @@ class Mutliple_Catch {
         } finally {
             System.out.println("Program End");
         }
+        return 0;
     }
 }
+
+/*
+
+ Execution order:
+    int value = 30 / 3; → executes normally
+    return value; → return value is prepared, but not yet returned
+    finally block executes → prints "Program End"
+    Then the method returns the prepared value (10) & the main method prints it.
+
+*/

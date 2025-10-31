@@ -8,6 +8,5 @@ public class WildCard {
         
         System.out.println("Number Value: " + num);
         System.out.println("Integer Value: " + intBox.getItem());
-
     }
 }

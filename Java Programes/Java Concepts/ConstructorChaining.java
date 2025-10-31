@@ -42,4 +42,8 @@ class Person {
       ConstructorChaining employee2 = new ConstructorChaining("Bob", "Tech");
     }
   }
-  
+
+/*
+ Constructor Chaining: 
+  In java is a technique where one constructor calls another constructor within the same class or the parent class.
+*/

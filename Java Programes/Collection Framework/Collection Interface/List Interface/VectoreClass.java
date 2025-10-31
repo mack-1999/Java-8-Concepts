@@ -29,11 +29,11 @@ public class VectoreClass {
     2. Allows Duplicates
     3. Index based access
     4. Allows null values
+    5. Synchronized (thread-safe)
 
  > Initial capacity of Vector is 10.
  > Vector internally uses Dynamic Array to store the elements.
  > When the number of elements exceeds the capacity, it creates a new array with double the capacity and copies all the elements to it.
- > Vector is synchronized (thread-safe), only one thread can access at a time.
  > Time Complexity:
     1. Access: O(1)
     2. Search: O(n)

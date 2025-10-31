@@ -27,3 +27,12 @@ public class WrapperClassExample {
         System.out.println("Wrapper Float: " + wrapperFloat);
     }
 }
+
+/*
+ Wrapper classes:
+    In Java provide a way to use primitive data types (int, char, boolean, etc.) as objects.
+
+Advantages of using wrapper classes:
+     1. Wrapper classes provide useful methods for converting between types and mainpulating data.
+     2. They are used in collections like ArrayList, HashMap, etc. which can only store objects, not primitives.
+*/
