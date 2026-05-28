@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 public class ArrayListClass {
@@ -24,6 +25,12 @@ public class ArrayListClass {
         //forEach loop
         for (Object elements: al) {
             System.out.println("2. Arraylist Elements: "+elements);
+        }
+
+        //Iterator
+        Iterator iterator = al.iterator();
+        while(iterator.hasNext()){
+            System.out.println("3. ArrayList Elements: "+iterator.next());
         }
 
 
