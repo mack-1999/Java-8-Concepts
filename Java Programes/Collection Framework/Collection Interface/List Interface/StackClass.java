@@ -10,7 +10,7 @@ public class StackClass {
         stack.add(40); // add() method is inherited from Vector class
 
         System.out.println("Stack: " + stack);
-        System.out.println("Popped element: " + stack.pop()); // Removes and returns the top element
+        System.out.println("Popped element: " + stack.pop()); // Removes and returns the element
         System.out.println("Stack after pop: " + stack);
         System.out.println("Top element: " + stack.peek()); // Returns the top element without removing it
         System.out.println("Is stack empty: " + stack.isEmpty()); // Checks if the stack is empty
@@ -31,4 +31,9 @@ public class StackClass {
     2. Dynamic Sizing
     3. Synchronized (thread-safe)
     4. Allows null values
+
+ > Time Complexity:
+    1. Access: O(1) for peek() & pop() methods
+    2. Search: O(n)
+    3. Insertion: O(1) for push() method
  */

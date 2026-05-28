@@ -7,15 +7,12 @@ public class ArrayListClass {
     public static void main(String[] args) {
         ArrayList<Integer> list = new ArrayList();
         list.add(0, 10);
-        list.add(1, 20);
+        list.add(1, 10);
         list.add(2, 30);
         list.set(2, 50); //! set() method is used to replace the element at specified index
 
         System.out.println("List Size: "+list.size()); //! size() method is used to get the number of elements in the list
-
-        for(int elements: list){
-            System.out.println("1. Arraylist Elements: "+elements);
-        }
+        System.out.println("1. Arraylist Elements: "+list);
 
         List al = new ArrayList(); // Object type ArrayList
         al.add(0, "Hello"); //! Store & retrieve data based on index

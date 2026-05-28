@@ -8,12 +8,13 @@ public class LinkedListClass {
         list.set(1, 50); //! set() method is used to replace the element at specified index
         list.add(1, 30); // add() method with index is used to insert the element at specified index
         list.addLast(70); // addLast() method is used to insert the element at the end of the list
+        list.offer(80);
 
         System.out.println("List Size: "+list.size());
-
-        for(int elements: list){
-            System.out.println("LinkedList Elements: "+elements);
-        }
+        System.out.println("LinkedList Elements: "+list);
+        list.peek(); //! peek() method is used to retrieve the first element of the list without removing it
+        list.poll(); //! poll() method is used to retrieve and remove the first element of the list
+        System.out.println("LinkedList after poll: "+list);
     }   
 }
 
