@@ -63,3 +63,13 @@ public class FunctionalInterface {
         list.stream().map(String::new).forEach(System.out::println); // Constructor reference
     }
 }
+
+/*
+> What is a Functional Interface in Java?
+    A functional interface in Java is an interface that has exactly one abstract method. 
+    It can have multiple default or static methods, but only one abstract method.
+
+> Why are Functional Interfaces important in Java?
+    Functional interfaces are important in Java because they enable the use of lambda expressions and method references,
+    which provide a more concise and readable way to represent instances of single-method interfaces.
+*/
