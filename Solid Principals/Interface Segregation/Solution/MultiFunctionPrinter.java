@@ -11,7 +11,6 @@ interface Fax {
     void fax();
 }
 
-@SuppressWarnings("unused")
 class MultiFunctionPrinter implements Printer, Scanner, Fax {
 
     @Override
@@ -28,6 +27,15 @@ class MultiFunctionPrinter implements Printer, Scanner, Fax {
     public void fax() {
         System.out.println("Faxing...");
     }
+}
+
+class BasicPrinter implements Printer {
+
+    @Override
+    public void print() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
 }
 
 // Each client depends only on the functionality it actually needs.

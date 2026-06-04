@@ -24,6 +24,10 @@ class Sparrow extends FlyingBird {
 
 class Ostrich extends Bird {
     // Ostrich doesn’t have fly(), only eat()
+    @Override
+    void eat() {
+        System.out.println("Bird is eating");
+    }
 }
 
 
