@@ -72,4 +72,9 @@ public class FunctionalInterface {
 > Why are Functional Interfaces important in Java?
     Functional interfaces are important in Java because they enable the use of lambda expressions and method references,
     which provide a more concise and readable way to represent instances of single-method interfaces.
+
+> Can we extend a functional interface in Java?
+    Yes, we can extend a functional interface in Java. 
+    However, the resulting interface must still have only one abstract method to be considered a functional interface.
+    
 */

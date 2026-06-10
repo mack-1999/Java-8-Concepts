@@ -1,4 +1,4 @@
-//@FunctionalInterface
+@java.lang.FunctionalInterface
 interface Calculation {
 
     //! An Interface that contains only one abstract method is known as functional interface.
