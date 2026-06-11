@@ -15,3 +15,7 @@ interface Calculation {
         System.out.println("Hello to everyone!");
     }
 }
+
+/*
+    Note: Static & Default Methods are not forced to be implemented by the implementing class.
+*/
