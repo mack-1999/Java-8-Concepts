@@ -1,4 +1,3 @@
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.IntStream;
@@ -10,7 +9,7 @@ public class InterviewQue {
         List<Integer> intNumbers = List.of(7,1,2,3,4,5,6,7,8,9,10,1,2,3,4);
 
         //todo: Q1. How to find even numbers in a list?
-        List<Integer> evenNumbers = numbers.stream().filter(num -> num % 2 ==0 ).toList();
+        List<Integer> evenNumbers = numbers.stream().filter(num -> num % 2 == 0).toList();
         //System.out.println("Even Numbers: "+evenNumbers);
 
         //todo: Q2. How to find duplicate elements in a list?
@@ -35,5 +34,9 @@ public class InterviewQue {
                                             .toArray();   // convert back to array
 
         //System.out.println("Unique sorted elements: " + Arrays.toString(mergedUniqueSorted));
+
+        //todo: Q6. Print all numbers greater than 5
+        //numbers.stream().filter(x -> x > 5).peek(x -> System.out.println("Greater than 5: "+x)).toList();
+        
     }
 }

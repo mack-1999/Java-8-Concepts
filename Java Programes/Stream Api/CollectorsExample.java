@@ -31,3 +31,11 @@ public class CollectorsExample {
 
     }
 }
+
+/*
+> Var Keyword: 
+    1. The var keyword in Java is used for local variable type inference.
+    2. It allows the compiler to infer the type of a variable based on the context in which it is used.
+    3. This can make code more concise and easier to read, especially when dealing with complex types or 
+       when the type can be easily inferred from the right-hand side of an assignment.
+*/

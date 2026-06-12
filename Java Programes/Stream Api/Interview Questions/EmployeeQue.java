@@ -8,8 +8,8 @@ public class EmployeeQue {
         emp.add(new Employee("Giny",45,"F",90000));
         emp.add(new Employee("Jack",35,"M",55000));
         emp.add(new Employee("Lilly",30,"F",90000));
-        emp.add(new Employee("Stan",45,"M",90000));
-        emp.add(new Employee("Rutu",23,"F",25000));
+        emp.add(new Employee("Leon",45,"M",80000));
+        emp.add(new Employee("Anjali",23,"F",25000));
         emp.add(new Employee("Jack",23,"M",25000));
 
         //! Print employees with same Salary/Name etc.
@@ -17,16 +17,18 @@ public class EmployeeQue {
 
         //System.out.println(groupBySalary);
 
-        groupBySalary.entrySet().stream().filter(e -> e.getValue().size() > 1).forEach(
-            e -> {
-                System.out.println("Employees with same Salary "+ e.getKey() + ":");
-                e.getValue().forEach(System.out::println);
-                System.out.println(); // For New line
-            }
-        );
+        // groupBySalary.entrySet().stream().filter(e -> e.getValue().size() > 1).forEach(
+        //     e -> {
+        //         System.out.println("Employees with same Salary "+ e.getKey() + ":");
+        //         e.getValue().forEach(System.out::println);
+        //         System.out.println(); // For New line
+        //     }
+        // );
 
         //!  Print highest paid employee based on gender
-        //List<Employee> highPaid = emp.stream().collect(Collectors.groupingBy(Employee::getGender)).values().stream().map(e -> e.stream().max(Comparator.comparing(Employee::getSalary)).orElse(null)).collect(Collectors.toList());
+        List<Employee> highPaid = emp.stream().collect(Collectors.groupingBy(Employee::getGender))
+        .values().stream().map(e -> e.stream().max(Comparator.comparing(Employee::getSalary))
+        .orElse(null)).collect(Collectors.toList());
         
         //! Print only distinct Gender
         //emp.stream().map(Employee::getGender).distinct().forEach(System.out::println);
@@ -38,6 +40,11 @@ public class EmployeeQue {
         //! Print total count of F & M employees
         // Map<String, Long> count = emp.stream().collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
         // System.out.println(count);
+
+        //! Print sorted employees by name, then salary
+        emp.stream()
+            .sorted(Comparator.comparing(Employee::getName).thenComparing(Employee::getSalary))
+            .forEach(System.out::println);
 
     }
 }
