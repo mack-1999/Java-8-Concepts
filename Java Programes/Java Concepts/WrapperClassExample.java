@@ -29,6 +29,18 @@ public class WrapperClassExample {
         System.out.println("Wrapper Boolean: " + wrapperBoolean);
         System.out.println("Wrapper Float: " + wrapperFloat);
         System.out.println("Parsed Integer: " + parsedInt);
+
+        Integer num1 = new Integer(127);
+        Integer num2 = new Integer(127);
+        System.out.println(num1 == num2); //Output 1
+
+        Integer num3 = 127;
+        Integer num4 = 127;
+        System.out.println(num3 == num4); //Output 2
+
+        Integer num5 = 500;
+        Integer num6 = 500;
+        System.out.println(num5 == num6); //Output 3
     }
 }
 

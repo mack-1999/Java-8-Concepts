@@ -6,7 +6,7 @@ public class InterviewQue {
     public static void main(String[] args) {
         
         List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
-        List<Integer> intNumbers = List.of(7,1,2,3,4,5,6,7,8,9,10,1,2,3,4);
+        List<Integer> intNumbers = List.of(17,1,2,3,4,5,6,7,8,9,10,1,2,3,4);
 
         //todo: Q1. How to find even numbers in a list?
         List<Integer> evenNumbers = numbers.stream().filter(num -> num % 2 == 0).toList();
@@ -19,6 +19,9 @@ public class InterviewQue {
         //todo: Q3. How to find the second highest number in a list?
         Integer secondHighest = intNumbers.stream().sorted((a,b) -> b.compareTo(a)).skip(1).findFirst().orElse(null);
         //System.out.println("Second Highest: "+secondHighest);
+
+        Integer highest = intNumbers.stream().sorted((a,b) -> b.compareTo(a)).findFirst().orElse(null);
+        //System.out.println("Highest Number: "+highest);
 
         //todo: Q4. Square of all numbers in a list?
         List<Integer> intSquare = numbers.stream().map(num -> num * num).toList();

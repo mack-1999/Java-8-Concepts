@@ -1,14 +1,12 @@
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class IntermediteOperations {
     public static void main(String[] args) {
         
         //! Filter Operation: Used to filter elements based on a condition
-        List<String> names = Arrays.asList("Aman", "Ankit", "Sumit", "Rohit", "Suresh", "Ramesh");
-        List<String> filteredNames = names.stream().filter(x -> x.startsWith("A")).collect(Collectors.toList());
-        System.out.println("Filtered Names: "+filteredNames);
+        List<String> names = Arrays.asList("Aman", "Ankit", "Sumit", "Rohit", "Amit", "Ramesh");
+        names.stream().filter(x -> x.startsWith("A")).forEach(System.out::println);
 
         //! Map Operation: Change an element to another form
         names.stream().map(String::toUpperCase).forEach(System.out::println);
